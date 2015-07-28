@@ -1,0 +1,9 @@
+.card {
+	background: rgba(212, 194, 106, 0.46) ;
+	opacity: 0.9;
+}
+
+h1, h2, h3, h4, h5, p, .footnote {
+	text-align: center;
+	font-family: "Special Elite", cursive;
+}
