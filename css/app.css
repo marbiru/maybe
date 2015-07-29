@@ -1,9 +1,16 @@
 .card {
-	background: rgba(212, 194, 106, 0.46) ;
+	padding-top: 20px;
+	background: rgba(212, 194, 106, 0.28) ;
 	opacity: 0.9;
 }
 
 h1, h2, h3, h4, h5, p, .footnote {
 	text-align: center;
 	font-family: "Special Elite", cursive;
+}
+
+/* Background pattern from subtlepatterns.com */
+
+body {
+    background-image: url("crossword.png");
 }
