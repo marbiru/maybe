@@ -2,8 +2,34 @@
 	padding-top: 20px;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
-	background: rgba(212, 194, 106, 0.28) ;
-	opacity: 0.9;
+	background: rgba(246, 242, 223, 0.9);
+	border-style: solid;
+	border-color: rgb(152, 138, 74);
+    border-width: 1px;
+}
+
+.more {
+	text-align: right;
+}
+
+.second {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	transform: rotate(2deg);
+	border-style: solid;
+	border-color: rgb(152, 138, 74);
+    border-width: 1px;
+}
+
+.third {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	transform: rotate(-2deg);
+	border-style: solid;
+	border-color: gray;
+    border-width: 1px;
 }
 
 h1, h2, h3, h4, h5, p, .footnote {
@@ -16,3 +42,4 @@ h1, h2, h3, h4, h5, p, .footnote {
 body {
     background-image: url("crossword.png");
 }
+
