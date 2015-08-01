@@ -16,21 +16,36 @@
 	display: none;
 	position: absolute;
 	z-index: 2;
-	transform: rotate(2deg);
 	border-style: solid;
 	border-color: rgb(152, 138, 74);
     border-width: 1px;
+}
+
+.second.might, .second.could {
+	transform: rotate(2deg);
+}
+
+.second.allegedly {
+	transform: rotate(-2deg);
 }
 
 .third {
 	display: none;
 	position: absolute;
 	z-index: 3;
-	transform: rotate(-2deg);
 	border-style: solid;
 	border-color: gray;
     border-width: 1px;
 }
+
+.third.might, .third.could {
+	transform: rotate(-2deg);
+}
+
+.third.allegedly {
+	transform: rotate(2deg);
+}
+
 
 h1, h2, h3, h4, h5, p, .footnote {
 	text-align: center;
