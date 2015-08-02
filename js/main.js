@@ -48,15 +48,17 @@ $(function () {
 
 function transition(firstClass, secondClass, thirdClass) {
 
-	$( firstClass ).click(function() {
-  		$( secondClass ).show();
-  		$( secondClass + " .tlt_headlines, " + secondClass + " .tlt_source").textillate('start');
-	});
+	function transition2(former, latter) {
+		$( former ).click(function() {
+	  		$( latter ).show();
+	  		$( latter + " .tlt_headlines, " + latter + " .tlt_source").textillate('start');
+		});
+	};
 
-	$( secondClass ).click(function() {
-	  $( thirdClass ).show();
-	  $( thirdClass + " .tlt_headlines, " + thirdClass + " .tlt_source" ).textillate('start');
-});
+	transition2(firstClass, secondClass);
+
+	transition2(secondClass, thirdClass);
+	
 };
 
 transition( ".might.first", ".might.second", ".might.third" );
