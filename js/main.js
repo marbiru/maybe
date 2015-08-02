@@ -25,7 +25,7 @@ $(function () {
 		autoStart: false,
 		in: { 
 			effect: 'rollIn',
-			delayScale: 1, 
+			delayScale: 0.8, 
 		} 
 	});
 });
@@ -34,7 +34,7 @@ $(function () {
 	$( ".second .tlt_source, .third .tlt_source" ).textillate({
 		autoStart: false,
 		//this seems to require a longer delay on mouseclick ones than on equivalent pageload ones -- wonder why?
-		initialDelay: 2500,
+		initialDelay: 2000,
 		in: {
 		 effect: 'rollIn',
 		 delayScale: 0.3,
@@ -46,44 +46,21 @@ $(function () {
 
 // eventually the below should be extracted as a function
 
-/* function transition(hedge) {
-	
-	$( ".might.first" ).click(function() {
-  		$( ".might.second" ).show();
+function transition(firstClass, secondClass, thirdClass) {
+
+	$( firstClass ).click(function() {
+  		$( secondClass ).show();
+  		$( secondClass + " .tlt_headlines, " + secondClass + " .tlt_source").textillate('start');
 	});
 
-	$( ".might.second" ).click(function() {
-  		$( ".might.third" ).show();
-	});
-}; */
-
-$( ".might.first" ).click(function() {
-  $( ".might.second" ).show();
-  $( ".might.second .tlt_headlines, .might.second .tlt_source" ).textillate('start');
+	$( secondClass ).click(function() {
+	  $( thirdClass ).show();
+	  $( thirdClass + " .tlt_headlines, " + thirdClass + " .tlt_source" ).textillate('start');
 });
+};
 
-$( ".might.second" ).click(function() {
-  $( ".might.third" ).show();
-  $( ".might.third .tlt_headlines, .might.third .tlt_source" ).textillate('start');
-});
+transition( ".might.first", ".might.second", ".might.third" );
 
+transition( ".allegedly.first", ".allegedly.second", ".allegedly.third" );
 
-$( ".allegedly.first" ).click(function() {
-  $( ".allegedly.second" ).show();
-  $( ".allegedly.second .tlt_headlines, .allegedly.second .tlt_source" ).textillate('start');
-});
-
-$( ".allegedly.second" ).click(function() {
-  $( ".allegedly.third" ).show();
-  $( ".allegedly.third .tlt_headlines, .allegedly.third .tlt_source" ).textillate('start');
-});
-
-$( ".could.first" ).click(function() {
-  $( ".could.second" ).show();
-  $( ".could.second .tlt_headlines, .could.second .tlt_source" ).textillate('start');
-});
-
-$( ".could.second" ).click(function() {
-  $( ".could.third" ).show();
-  $( ".could.third .tlt_headlines, .could.third .tlt_source" ).textillate('start');
-});
+transition( ".could.first", ".could.second", ".could.third" );
