@@ -11,6 +11,7 @@
 .second {
 	display: none;
 	position: absolute;
+	margin-top: 25px;
 	z-index: 2;
 	border-style: solid;
 	border-color: rgb(152, 138, 74);
@@ -28,6 +29,7 @@
 .third {
 	display: none;
 	position: absolute;
+	margin-top: 50px;
 	z-index: 3;
 	border-style: solid;
 	border-color: gray;
