@@ -48,6 +48,15 @@ h1, h2, h3, h4, h5, p, .footnote {
 	font-family: "Special Elite", cursive;
 }
 
+h1 {
+	margin-top: 30px;
+}
+
+
+.highlight {
+	color: #D30202;
+}
+
 /* Background pattern from subtlepatterns.com */
 
 body {
