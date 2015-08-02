@@ -4,6 +4,7 @@ $(function () {
 			effect: 'rollIn',
 			delayScale: 1, 
 		} 
+
 	});
 });
 
@@ -18,8 +19,6 @@ $(function () {
 	});
 });
 
-// on mouseclick
-
 $(function () {
 	$( ".second .tlt_headlines, .third .tlt_headlines" ).textillate({ 
 		autoStart: false,
@@ -33,7 +32,7 @@ $(function () {
 $(function () {
 	$( ".second .tlt_source, .third .tlt_source" ).textillate({
 		autoStart: false,
-		//this seems to require a longer delay on mouseclick ones than on equivalent pageload ones -- wonder why?
+		//this seems to require a longer delay on mouseclick ones than the equivalent function when executed "on pageload" does -- I wonder why?
 		initialDelay: 2000,
 		in: {
 		 effect: 'rollIn',
@@ -42,9 +41,6 @@ $(function () {
 		}
 	});
 });
-
-
-// eventually the below should be extracted as a function
 
 function transition(firstClass, secondClass, thirdClass) {
 
