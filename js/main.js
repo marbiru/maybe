@@ -42,7 +42,13 @@ $(function () {
 	});
 });
 
-function transition(firstClass, secondClass, thirdClass) {
+function transition(hedgeWord) {
+
+	// would this be even better with an array?, somehow? In theory this could allow automatic transitions for any number of headlines. But class-names would have to be changed to make this possible i.e. other parts of the code would have to change substantially
+
+	var firstClass = hedgeWord + ".first";
+	var secondClass = hedgeWord + ".second";
+	var thirdClass = hedgeWord + ".third";
 
 	function transition2(former, latter) {
 		$( former ).click(function() {
@@ -57,8 +63,8 @@ function transition(firstClass, secondClass, thirdClass) {
 	
 };
 
-transition( ".might.first", ".might.second", ".might.third" );
+transition( ".might" );
 
-transition( ".allegedly.first", ".allegedly.second", ".allegedly.third" );
+transition( ".allegedly" );
 
-transition( ".could.first", ".could.second", ".could.third" );
+transition( ".could" );
